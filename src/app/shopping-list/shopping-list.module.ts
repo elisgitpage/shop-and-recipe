@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { LoggingService } from "../logging.service";
 import { SharedModule } from "../shared/shared.module";
 
 import { ShoppingListEditComponent } from "./shopping-list-edit/shopping-list-edit.component";
@@ -12,7 +13,8 @@ import { ShoppingListComponent } from "./shopping-list.component";
     ShoppingListComponent,
     ShoppingListEditComponent
   ],
-  imports: [ FormsModule, ShoppingListRoutingModule, SharedModule ]
+  imports: [ FormsModule, ShoppingListRoutingModule, SharedModule ],
+  // providers: [ LoggingService ]
 })
 export class ShoppingListModule {
 
