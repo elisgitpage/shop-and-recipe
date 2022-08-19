@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { LoggingService } from "./logging.service";
-import { RecipeService } from "./recipes/recipe.service";
-import { ShoppingListService } from "./shopping-list/shoppingList.service";
+// import { RecipeService } from "./recipes/recipe.service";
+// import { ShoppingListService } from "./shopping-list/shoppingList.service";
 
 @NgModule({
   providers: [
-    ShoppingListService,
-    RecipeService,
+    // ShoppingListService,
+    // RecipeService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
     LoggingService
   ]

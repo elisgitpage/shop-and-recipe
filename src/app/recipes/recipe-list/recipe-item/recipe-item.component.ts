@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit, Renderer2 } from "@angular/core";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import { Recipe } from "../../recipe.model";
-import { RecipeService } from "../../recipe.service";
+// import { RecipeService } from "../../recipe.service";
 
 @Component({
   selector: "app-recipe-item",
@@ -12,7 +12,12 @@ export class RecipeItemComponent {
   @Input() recipe: Recipe;
   @Input() index: number;
 
-  constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute, private renderer: Renderer2, private elemRef: ElementRef) { }
+  constructor(
+    // private recipeService: RecipeService, 
+    private router: Router,
+    private route: ActivatedRoute,
+    private renderer: Renderer2,
+    private elemRef: ElementRef) { }
 
   // ngOnInit(): void {
   //   this.route.params
